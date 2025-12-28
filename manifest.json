@@ -1,0 +1,16 @@
+{
+  "short_name": "Scriptures",
+  "name": "Daily Scripture App",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2903/2903510.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#1a1a2e",
+  "display": "standalone",
+  "theme_color": "#1a1a2e"
+}

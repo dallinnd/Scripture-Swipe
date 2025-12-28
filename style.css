@@ -1,0 +1,18 @@
+body {
+    box-sizing: border-box;
+    transition: background-color 0.4s ease;
+}
+
+.scripture-container {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scripture-container.swiping {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Hide scrollbars but allow scrolling */
+#theme-menu::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture Display</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+</head>
+<body class="h-full overflow-hidden bg-[#1a1a2e]">
+    <div id="app" class="w-full h-full flex items-center justify-center p-8 relative">
+        
+        <button id="menu-button" class="fixed top-6 right-6 z-50 p-2 text-white">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <div id="theme-menu" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 bg-white rounded-2xl shadow-2xl p-6 hidden w-[90%] max-h-[80%] overflow-y-auto">
+            <h3 class="text-gray-800 font-semibold mb-2">Font Size</h3>
+            <div class="flex items-center justify-between mb-6 bg-gray-50 p-4 rounded-xl">
+                <button id="decrease-font" class="w-10 h-10 bg-gray-200 rounded-lg text-xl font-bold">−</button>
+                <span id="font-size-display" class="text-2xl font-semibold text-gray-800">18</span>
+                <button id="increase-font" class="w-10 h-10 bg-gray-200 rounded-lg text-xl font-bold">+</button>
+            </div>
+            
+            <div class="flex border-b mb-4">
+                <button id="themes-tab" class="flex-1 py-2 font-semibold border-b-2 border-blue-500">Themes</button>
+                <button id="fonts-tab" class="flex-1 py-2 font-semibold text-gray-400 border-b-2 border-transparent">Fonts</button>
+            </div>
+
+            <div id="themes-content" class="space-y-2">
+                <button class="theme-option w-full p-4 rounded-xl text-left bg-[#1a1a2e] text-white" data-bg="#1a1a2e" data-text="#eeeeee">Midnight Blue</button>
+                <button class="theme-option w-full p-4 rounded-xl text-left bg-[#f5f5dc] text-gray-800" data-bg="#f5f5dc" data-text="#2c2c2c">Cream</button>
+            </div>
+        </div>
+
+        <div class="scripture-container max-w-2xl w-full text-center">
+            <p id="verse-text" class="text-2xl leading-relaxed mb-6"></p>
+            <p id="verse-location" class="text-lg opacity-70"></p>
+        </div>
+
+        <div id="swipe-hint" class="fixed bottom-8 text-center text-sm opacity-50">
+            Swipe up for next • Swipe down for previous
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
