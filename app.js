@@ -136,14 +136,27 @@ document.addEventListener('touchend', e => {
 const menu = document.getElementById('theme-menu');
 document.getElementById('menu-button').onclick = () => menu.classList.toggle('hidden');
 
+// --- Theme Selection ---
 document.querySelectorAll('.theme-option').forEach(btn => {
     btn.onclick = () => {
-        config.bg = btn.dataset.bg;
-        config.text = btn.dataset.text;
+        config.bg = btn.getAttribute('data-bg');
+        config.text = btn.getAttribute('data-text');
         updateUI();
-        menu.classList.add('hidden');
+        // Optional: Close menu after selection
+        // document.getElementById('theme-menu').classList.add('hidden');
     }
 });
+
+// --- Font Selection ---
+document.querySelectorAll('.font-option').forEach(btn => {
+    btn.onclick = () => {
+        config.font = btn.getAttribute('data-font');
+        updateUI();
+        // Optional: Close menu after selection
+        // document.getElementById('theme-menu').classList.add('hidden');
+    }
+});
+
 
 document.getElementById('increase-font').onclick = () => { config.size += 2; updateUI(); };
 document.getElementById('decrease-font').onclick = () => { config.size = Math.max(12, config.size - 2); updateUI(); };
