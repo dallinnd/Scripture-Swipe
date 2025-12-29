@@ -34,9 +34,20 @@
                 <button id="fonts-tab" class="flex-1 py-2 font-semibold text-gray-400 border-b-2 border-transparent">Fonts</button>
             </div>
 
-            <div id="themes-content" class="space-y-2">
-                <button class="theme-option w-full p-4 rounded-xl text-left bg-[#1a1a2e] text-white" data-bg="#1a1a2e" data-text="#eeeeee">Midnight Blue</button>
-                <button class="theme-option w-full p-4 rounded-xl text-left bg-[#f5f5dc] text-gray-800" data-bg="#f5f5dc" data-text="#2c2c2c">Cream</button>
+            <div id="menu-scroll-container">
+                <div id="themes-content" class="space-y-3">
+                    <button class="theme-option w-full p-4 rounded-xl text-left bg-[#1a1a2e] text-[#eeeeee] border border-gray-700" data-bg="#1a1a2e" data-text="#eeeeee">Midnight Blue</button>
+                    <button class="theme-option w-full p-4 rounded-xl text-left bg-[#2c2c2c] text-[#f0f0f0] border border-gray-700" data-bg="#2c2c2c" data-text="#f0f0f0">Charcoal</button>
+                    <button class="theme-option w-full p-4 rounded-xl text-left bg-[#f5f5dc] text-[#2c2c2c] border border-gray-200" data-bg="#f5f5dc" data-text="#2c2c2c">Cream</button>
+                    <button class="theme-option w-full p-4 rounded-xl text-left bg-[#e3f2fd] text-[#1565c0] border border-blue-100" data-bg="#e3f2fd" data-text="#1565c0">Sky Blue</button>
+                </div>
+
+                <div id="fonts-content" class="space-y-3 hidden">
+                    <button class="font-option w-full p-4 rounded-xl text-left bg-gray-50 border text-gray-800" data-font="Georgia, serif" style="font-family: Georgia;">Georgia (Classic)</button>
+                    <button class="font-option w-full p-4 rounded-xl text-left bg-gray-50 border text-gray-800" data-font="'Palatino Linotype', 'Book Antiqua', Palatino, serif" style="font-family: Palatino;">Palatino (Elegant)</button>
+                    <button class="font-option w-full p-4 rounded-xl text-left bg-gray-50 border text-gray-800" data-font="Arial, sans-serif" style="font-family: Arial;">Arial (Modern)</button>
+                    <button class="font-option w-full p-4 rounded-xl text-left bg-gray-50 border text-gray-800" data-font="Verdana, sans-serif" style="font-family: Verdana;">Verdana (Clean)</button>
+                </div>
             </div>
         </div>
 
