@@ -143,7 +143,7 @@ document.querySelectorAll('.theme-option').forEach(btn => {
         config.text = btn.getAttribute('data-text');
         updateUI();
         // Optional: Close menu after selection
-        // document.getElementById('theme-menu').classList.add('hidden');
+        document.getElementById('theme-menu').classList.add('hidden');
     }
 });
 
@@ -153,7 +153,7 @@ document.querySelectorAll('.font-option').forEach(btn => {
         config.font = btn.getAttribute('data-font');
         updateUI();
         // Optional: Close menu after selection
-        // document.getElementById('theme-menu').classList.add('hidden');
+        document.getElementById('theme-menu').classList.add('hidden');
     }
 });
 
