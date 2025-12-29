@@ -14,15 +14,15 @@ body {
 
 /* Ensure the menu itself can scroll if content is too long */
 #theme-menu {
-    max-height: 85vh; /* Limit height to 85% of screen */
+    max-height: 80vh; /* Keeps the menu from going off-screen on small phones */
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding-bottom: 2rem; /* Extra space at bottom so the last button isn't cut off */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Fix the Tab Content visibility */
 #themes-content, #fonts-content {
-    width: 100%;
-    padding-bottom: 20px; /* Space at the bottom */
+    flex-grow: 1;
 }
 
 /* Hide the inactive tab content */
